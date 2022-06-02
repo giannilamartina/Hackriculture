@@ -6,3 +6,8 @@ function flipCard() {
 card.forEach((card) => card.addEventListener("click", flipCard));
 
 const navigationHeight = document.querySelector(".navbar").offsetHeight;
+
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  navigationHeight + "px"
+);

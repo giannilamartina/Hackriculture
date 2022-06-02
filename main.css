@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--scroll-padding, 200px);
+  scroll-padding-top: var(--scroll-padding, 10px);
 }
 
 .navbar {
@@ -26,12 +26,12 @@ html {
 }
 
 .navbar img {
-  display: inline-block;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 4.5em;
-  height: 4.5em;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 a {
@@ -55,7 +55,8 @@ body {
   line-height: 2em;
 }
 
-h1 {
+h1,
+h2 {
   padding: 0.25em;
 }
 .container {
@@ -64,6 +65,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 4em; */
 }
 
 .image {
@@ -75,20 +77,18 @@ h1 {
   margin: 10em 5em;
 }
 
-/* .services {
-  margin: 2em 5em;
-  padding-top: 5em;
+.services {
+  /* margin: 2em 5em; */
+  /* padding-top: 5em; */
 }
 
-.aboutus {
-  margin: 2em 5em;
-  padding-top: 5em;
-}
-
+.aboutus,
 .contactus {
-  margin: 2em 5em;
+  /* margin: 2em 5em; */
+  /* padding-top: 5em; */
   padding-top: 5em;
-} */
+  padding-bottom: 5em;
+}
 
 .card {
   margin: 0.5em 0.5em;
@@ -212,3 +212,101 @@ h1 {
 .zoom:hover {
   transform: scale(1.05);
 }
+
+/* Form */
+.form-container {
+  display: flex;
+}
+
+.left-container {
+  flex: 1;
+  height: 480px;
+  background-color: teal;
+}
+.right-container {
+  display: flex;
+  flex: 1;
+  height: 460px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  display: flex;
+  flex: 1;
+  height: 480px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.left-container p {
+  font-size: 0.9rem;
+}
+
+.right-inner-container {
+  width: 70%;
+  height: 80%;
+  text-align: center;
+}
+
+.left-inner-container {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  line-height: 22px;
+}
+
+input,
+textarea {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid teal;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #00b4cf;
+  background-color: #00b4cf;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 600px) {
+  .left-container {
+    display: none;
+  }
+  .lg-view {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display: none;
+  }
+}
+
+form p {
+  text-align: left;
+}
+
+/* End form */
