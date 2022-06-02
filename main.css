@@ -10,6 +10,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 200px);
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -20,17 +25,39 @@
   z-index: 1;
 }
 
+.navbar img {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 4.5em;
+  height: 4.5em;
+}
+
 a {
   text-decoration: none;
   padding: 2em 1em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
   font-family: montserrat, sans-serif;
   width: 100%;
   min-height: 100vh;
+  text-align: center;
+  line-height: 2em;
 }
 
+h1 {
+  padding: 0.25em;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -39,19 +66,29 @@ body {
   align-items: center;
 }
 
+.image {
+  width: 10em;
+  height: 10em;
+}
+
 .intro {
   margin: 10em 5em;
 }
 
-.services {
-  margin: 2m 5em;
-  text-align: center;
+/* .services {
+  margin: 2em 5em;
   padding-top: 5em;
 }
 
 .aboutus {
-  margin: 10em 5em;
+  margin: 2em 5em;
+  padding-top: 5em;
 }
+
+.contactus {
+  margin: 2em 5em;
+  padding-top: 5em;
+} */
 
 .card {
   margin: 0.5em 0.5em;
@@ -166,4 +203,12 @@ body {
   color: var(--dark);
   font-size: 18px;
   line-height: 1.5;
+}
+
+.zoom {
+  transition: transform 0.5s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.05);
 }
