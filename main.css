@@ -14,6 +14,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 10px);
   background-color: #eeeeee;
+  color: #393e46;
+}
+
+p {
+  cursor: default;
 }
 
 .navbar {
@@ -59,6 +64,7 @@ body {
 h1,
 h2 {
   padding: 0.25em;
+  cursor: default;
 }
 .container {
   display: flex;
@@ -98,8 +104,16 @@ h2 {
   perspective: 1000px;
 }
 
+.card > h1,
+.card > h2,
+.card__body > p {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   .card {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -238,13 +252,14 @@ h2 {
 .left-container {
   display: flex;
   flex: 1;
-  height: 480px;
+  height: 500px;
   justify-content: center;
   align-items: center;
   color: white;
   background-color: #00adb5;
   padding-top: 2em;
   padding-bottom: 2em;
+  cursor: default;
 }
 
 .left-container p {
@@ -264,13 +279,25 @@ h2 {
   line-height: 22px;
 }
 
+.social {
+  width: 2em;
+  height: 2em;
+}
+
+.fa-envelope {
+  color: #393e46;
+}
+.fa-linkedin {
+  color: #0072b1;
+}
+
 input,
 textarea {
   background-color: #eee;
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
-  width: 100%;
+  width: 80%;
   font-size: 0.8rem;
 }
 
