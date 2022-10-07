@@ -97,6 +97,12 @@ h2 {
   padding-bottom: 5em;
 }
 
+/* Testimonials */
+.testimonials {
+  height: 50em;
+  width: 80em;
+}
+
 .card {
   margin: 0.5em 0.5em;
   width: 25em;
